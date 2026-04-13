@@ -11,21 +11,18 @@ del restaurante y las diferentes categorías en el menú (Platos, Bebidas, Postr
 la casa), así como el uso de elementos adicionales que permitan complementar la información acerca 
 de las promociones especiales, como parte de su oferta gastronómica tanto a su distinguida clientela 
 nacional e internacional. </p>
-<p align="justify">Los propietarios del restaurante de especialidades de la gastronomía chilena para el que trabajas 
+<p align="justify">Los propietarios del restaurante (en la Semana 3) de especialidades de la gastronomía chilena para el que trabajas 
 como programador han solicitado algunas incorporaciones y modificaciones a la página web que 
 estás diseñando para la promoción del menú de platos típicos de la región. 
 Tu próxima tarea consiste en diseñar una nueva versión de la página que muestre una mejor 
 disposición de la información incluida, utilizando títulos destacados para identificar la descripción 
-Programación Web I 
 del restaurante y las diferentes categorías en el menú (Platos, Bebidas, Postres y Especialidades de 
 la casa), así como el uso de elementos adicionales que permitan complementar la información acerca 
 de las promociones especiales, como parte de su oferta gastronómica tanto a su distinguida clientela 
 nacional e internacional. 
 Tu próxima tarea consiste en realizar los ajustes necesarios, para que la página ofrezca: </p/>
 
-- Al final de la página web, crear una nueva sección llamada “Videos relacionados”, que incluya 
-la reproducción de un video de YouTube correspondiente a la preparación de un plato típico 
-o de la zona geográfica de la que proviene. 
+- Al final de la página web, crear una nueva sección llamada “Videos relacionados”, que incluya la reproducción de un video de YouTube correspondiente a la preparación de un plato típico o de la zona geográfica de la que proviene. 
 - Un formulario de acceso a la página. 
 - Un formulario de registro de nuevos usuarios. 
 
