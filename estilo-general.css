@@ -1,23 +1,6 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos del body */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #FAFAFA;
-  color: #333333;
-  line-height: 1.6;
-  background-image: linear-gradient(to bottom, #FFF8DC 0%, #FAFAFA 100%);
-}
-
 /* ========================================
    HEADER Y NAVEGACIÓN
    ======================================== */
-
 header {
   background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
   color: #FFFFFF;
@@ -26,7 +9,6 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-bottom: 5px solid #D2691E;
 }
-
 header h1 {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 42px;
@@ -34,8 +16,6 @@ header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   letter-spacing: 2px;
 }
-
-/* Navegación */
 nav {
   background-color: #5D4E37;
   padding: 15px;
@@ -43,14 +23,12 @@ nav {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
-
 nav h2 {
   font-size: 18px;
   margin-bottom: 10px;
   color: #FFD700;
   text-align: center;
 }
-
 nav ul {
   list-style-type: none;
   display: flex;
@@ -58,11 +36,7 @@ nav ul {
   justify-content: center;
   gap: 10px;
 }
-
-nav li {
-  display: inline-block;
-}
-
+nav li { display: inline-block; }
 nav a {
   display: block;
   padding: 10px 20px;
@@ -74,7 +48,6 @@ nav a {
   transition: all 0.3s ease;
   border: 2px solid transparent;
 }
-
 nav a:hover {
   background-color: #FFD700;
   color: #5D4E37;
@@ -86,13 +59,11 @@ nav a:hover {
 /* ========================================
    SECCIONES GENERALES
    ======================================== */
-
 main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
-
 section {
   margin: 40px 0;
   padding: 30px;
@@ -100,7 +71,6 @@ section {
   border-radius: 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
-
 section h2 {
   font-family: Georgia, serif;
   color: #8B4513;
@@ -109,19 +79,16 @@ section h2 {
   padding-bottom: 10px;
   border-bottom: 3px solid #D2691E;
 }
-
 section h3 {
   color: #A0522D;
   font-size: 24px;
   margin: 20px 0 10px 0;
 }
-
 section h4 {
   color: #5D4E37;
   font-size: 20px;
   margin: 15px 0 10px 0;
 }
-
 section p {
   margin-bottom: 15px;
   text-align: justify;
@@ -130,11 +97,7 @@ section p {
 /* ========================================
    ESPECIALIDADES (Lista de Definición)
    ======================================== */
-
-#especialidades dl {
-  margin: 20px 0;
-}
-
+#especialidades dl { margin: 20px 0; }
 #especialidades dt {
   font-weight: bold;
   color: #8B0000;
@@ -146,7 +109,6 @@ section p {
   border-left: 4px solid #D2691E;
   border-radius: 5px;
 }
-
 #especialidades dd {
   margin-left: 20px;
   margin-bottom: 15px;
@@ -156,24 +118,16 @@ section p {
   line-height: 1.8;
   border: 1px solid #DDDDDD;
 }
-
-#especialidades dd::before {
-  content: "🍽️ ";
-}
+#especialidades dd::before { content: "🍽️ "; }
 
 /* ========================================
    PLATO DE LA SEMANA
    ======================================== */
-
 #plato-semana {
   background: linear-gradient(to bottom, #FFF8DC, #FFFFFF);
   border: 3px solid #DAA520;
 }
-
-#plato-semana article {
-  padding: 20px;
-}
-
+#plato-semana article { padding: 20px; }
 #plato-semana h3 {
   color: #8B4513;
   font-size: 36px;
@@ -181,21 +135,10 @@ section p {
   margin-bottom: 25px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
+#plato-semana h3::after { content: " ⭐"; }
+#plato-semana p strong { color: #8B0000; }
+#plato-semana em { color: #006400; font-style: italic; }
 
-#plato-semana h3::after {
-  content: " ⭐";
-}
-
-#plato-semana p strong {
-  color: #8B0000;
-}
-
-#plato-semana em {
-  color: #006400;
-  font-style: italic;
-}
-
-/* Galería de Imágenes */
 #plato-semana figure {
   margin: 25px auto;
   text-align: center;
@@ -206,7 +149,6 @@ section p {
   display: inline-block;
   max-width: 100%;
 }
-
 #plato-semana img {
   border-radius: 8px;
   border: 3px solid #DAA520;
@@ -214,12 +156,10 @@ section p {
   display: block;
   margin: 0 auto;
 }
-
 #plato-semana img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
-
 #plato-semana figcaption {
   margin-top: 10px;
   font-size: 14px;
@@ -229,8 +169,6 @@ section p {
   background-color: #FFF8DC;
   border-radius: 5px;
 }
-
-/* Audio */
 #plato-semana audio {
   width: 100%;
   max-width: 600px;
@@ -238,12 +176,7 @@ section p {
   display: block;
   border-radius: 8px;
 }
-
-#plato-semana audio::-webkit-media-controls-panel {
-  background-color: #8B4513;
-}
-
-/* Enlace externo */
+#plato-semana audio::-webkit-media-controls-panel { background-color: #8B4513; }
 #plato-semana a {
   display: inline-block;
   margin: 15px 0;
@@ -256,7 +189,6 @@ section p {
   transition: all 0.3s ease;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
-
 #plato-semana a:hover {
   background: linear-gradient(135deg, #1E90FF, #4169E1);
   transform: translateY(-2px);
@@ -266,12 +198,10 @@ section p {
 /* ========================================
    VIDEOS RELACIONADOS
    ======================================== */
-
 #videos-relacionados {
   background-color: #F0F8FF;
   border: 3px solid #4169E1;
 }
-
 #videos-relacionados article {
   margin: 30px 0;
   padding: 20px;
@@ -279,13 +209,11 @@ section p {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
-
 #videos-relacionados h3 {
   color: #191970;
   font-size: 26px;
   margin-bottom: 15px;
 }
-
 #videos-relacionados iframe {
   display: block;
   margin: 20px auto;
@@ -294,12 +222,10 @@ section p {
   border: 3px solid #4169E1;
   transition: transform 0.3s ease;
 }
-
 #videos-relacionados iframe:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
-
 #videos-relacionados small {
   display: block;
   text-align: center;
@@ -309,195 +235,8 @@ section p {
 }
 
 /* ========================================
-   FORMULARIOS
-   ======================================== */
-
-/* Sección Acceso */
-#acceso {
-  background: linear-gradient(135deg, #E6E6FA 0%, #F0F8FF 100%);
-  border: 3px solid #9370DB;
-  max-width: 500px;
-  margin: 40px auto;
-}
-
-#acceso h2 {
-  text-align: center;
-  color: #4B0082;
-}
-
-#acceso fieldset {
-  border: 2px solid #9370DB;
-  border-radius: 8px;
-  padding: 25px;
-  margin: 20px 0;
-  background-color: #FFFFFF;
-}
-
-#acceso legend {
-  font-weight: bold;
-  color: #4B0082;
-  font-size: 18px;
-  padding: 0 10px;
-  background-color: #E6E6FA;
-  border-radius: 5px;
-}
-
-#acceso label {
-  display: block;
-  margin: 12px 0 5px 0;
-  font-weight: bold;
-  color: #5D4E37;
-}
-
-#acceso input[type="text"],
-#acceso input[type="password"] {
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #9370DB;
-  border-radius: 5px;
-  font-size: 14px;
-  transition: all 0.3s ease;
-}
-
-#acceso input[type="text"]:focus,
-#acceso input[type="password"]:focus {
-  border-color: #4B0082;
-  box-shadow: 0 0 8px rgba(75, 0, 130, 0.3);
-  outline: none;
-}
-
-#acceso input[type="submit"] {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  background: linear-gradient(135deg, #8BAAAA, #5D4E37);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#acceso input[type="submit"]:hover {
-  background: linear-gradient(135deg, #5D4E37, #8BAAAA);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#acceso a {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  color: #4169E1;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#acceso a:hover {
-  text-decoration: underline;
-  color: #1E90FF;
-}
-
-/* Sección Registro */
-#registro {
-  background: linear-gradient(135deg, #F0FFF0 0%, #F5FFFA 100%);
-  border: 3px solid #228B22;
-}
-
-#registro h2 {
-  text-align: center;
-  color: #006400;
-}
-
-#registro fieldset {
-  border: 2px solid #228B22;
-  border-radius: 8px;
-  padding: 25px;
-  margin: 20px 0;
-  background-color: #FFFFFF;
-}
-
-#registro legend {
-  font-weight: bold;
-  color: #006400;
-  font-size: 18px;
-  padding: 0 10px;
-  background-color: #F0FFF0;
-  border-radius: 5px;
-}
-
-#registro label {
-  display: block;
-  margin: 10px 0 5px 0;
-  font-weight: bold;
-  color: #5D4E37;
-}
-
-#registro input[type="text"],
-#registro input[type="email"],
-#registro input[type="tel"],
-#registro input[type="date"],
-#registro select,
-#registro textarea {
-  width: 100%;
-  padding: 10px;
-  border: 2px solid #228B22;
-  border-radius: 5px;
-  font-size: 14px;
-  font-family: inherit;
-  transition: all 0.3s ease;
-}
-
-#registro input:focus,
-#registro select:focus,
-#registro textarea:focus {
-  border-color: #006400;
-  box-shadow: 0 0 8px rgba(34, 139, 34, 0.3);
-  outline: none;
-}
-
-#registro input[type="radio"] {
-  margin: 0 8px 0 15px;
-  cursor: pointer;
-}
-
-#registro input[type="radio"] + label {
-  display: inline-block;
-  margin-right: 20px;
-  font-weight: normal;
-}
-
-#registro textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-#registro input[type="submit"] {
-  width: 100%;
-  padding: 14px;
-  margin-top: 20px;
-  background: linear-gradient(135deg, #228B22, #006400);
-  color: #FFFFFF;
-  border: none;
-  border-radius: 5px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#registro input[type="submit"]:hover {
-  background: linear-gradient(135deg, #006400, #228B22);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* ========================================
    FOOTER
    ======================================== */
-
 footer {
   background: linear-gradient(135deg, #5D4E37 0%, #8B4513 100%);
   color: #FFFFFF;
@@ -507,112 +246,39 @@ footer {
   border-top: 5px solid #D2691E;
   box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
 }
-
-footer p {
-  margin: 10px 0;
-}
-
-footer small {
-  display: block;
-  margin-top: 10px;
-  color: #FFD700;
-}
-
-footer address {
-  margin-top: 20px;
-  font-style: normal;
-  line-height: 1.8;
-}
-
-footer strong {
-  color: #FFD700;
-}
+footer p { margin: 10px 0; }
+footer small { display: block; margin-top: 10px; color: #FFD700; }
+footer address { margin-top: 20px; font-style: normal; line-height: 1.8; }
+footer strong { color: #FFD700; }
 
 /* ========================================
    UTILIDADES Y RESPONSIVE
    ======================================== */
-
-/* Saltos de línea */
-br {
-  line-height: 1.6;
-}
-
-/* Responsive Design */
+br { line-height: 1.6; }
 @media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 28px;
-  }
-  
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  nav a {
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-  }
-  
-  section {
-    padding: 20px;
-    margin: 20px 10px;
-  }
-  
-  section h2 {
-    font-size: 24px;
-  }
-  
-  #plato-semana figure {
-    width: 100%;
-  }
-  
-  #plato-semana img {
-    width: 100%;
-    height: auto;
-  }
-  
-  #videos-relacionados iframe {
-    width: 100%;
-    height: auto;
-  }
+  header h1 { font-size: 28px; }
+  nav ul { flex-direction: column; align-items: center; }
+  nav a { width: 100%; max-width: 300px; text-align: center; }
+  section { padding: 20px; margin: 20px 10px; }
+  section h2 { font-size: 24px; }
+  #plato-semana figure { width: 100%; }
+  #plato-semana img { width: 100%; height: auto; }
+  #videos-relacionados iframe { width: 100%; height: auto; }
 }
-
-/* Animaciones */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
+section { animation: fadeIn 0.6s ease-out; }
+a { transition: all 0.3s ease; }
 
-section {
-  animation: fadeIn 0.6s ease-out;
-}
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: #F1F1F1; }
+::-webkit-scrollbar-thumb { background: #8B4513; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #A0522D; }
 
-/* Efecto hover general para enlaces */
-a {
-  transition: all 0.3s ease;
-}
-
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #F1F1F1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #8B4513;
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #A0522D;
-}
+/* 
+   NOTA: Las reglas para #acceso, #registro y #quienes-somos 
+   han sido desplazadas al bloque <style> interno para cumplir 
+   con la consigna de la semana y evitar colisiones por duplicidad.
+*/

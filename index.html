@@ -7,61 +7,191 @@
   <meta name="description" content="Restaurante de gastronomía chilena tradicional en Santiago">
   <title>Restaurante Sabores de Chile - Gastronomía Tradicional</title>
 
-  <!-- CSS Interno para la sección Quiénes Somos -->
-  <style type="text/css">
-    /* Estilos para la sección Quiénes Somos */
-    #quienes-somos {
-      background-color: #FFF8DC;
-      padding: 30px;
-      margin: 20px 0;
-      border-left:5px solid #8B4513;
-      border-radius: 10px;
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    }
-
-      #quienes-somos h2 {
-        color: #8B4513;
-        font-family: 'Georgia', serif;
-        font-size: 32px;
-        text-align: center;
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        border-bottom: 2px solid #D2691E;
-        padding-bottom: 10px;
-      }
-
-      #quienes-somos p {
-        color: #2f4f4f;
-        font-family: 'Arial', sans-serif;
-        font-size: 16px;
-        line-height: 1.8;
-        margin-bottom: 15px;
-        text-align: justify;
-      }
-
-      #quienes-somos strong {
-        color: #8B0000;
-        font-weight: bold;
-      }
-
-      #quienes-somos em {
-        color: #006400;
-        font-style: italic;
-      }
-  </style>
-
-  <!-- Primera hoja de estilo: @import para promociones -->
-  <style type="text/css">
-    @import url('estilo-promociones.css');
-  </style>
-
+  <!-- Enlace a hojas de estilo externas -->
+  <link rel="stylesheet" type="text/css" href="estilo-tablas.css">
+  <link rel="stylesheet" type="text/css" href="estilo-promociones.css">
   <link rel="stylesheet" type="text/css" href="estilo-general.css">
 
-  <!-- Segunda hoja de estilo: <link> para tablas -->
-  <link rel="stylesheet" type="text/css" href="estilo-tablas.css">
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #FAFAFA;
+      color: #333333; /* Color base que se heredará a todos los descendientes */
+      line-height: 1.6;
+      background-image: linear-gradient(to bottom, #FFF8DC 0%, #FAFAFA 100%);
+    }
+
+    #quienes-somos {
+      background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+      border: 3px solid #DAA520;
+      border-radius: 15px;
+      padding: 40px;
+      margin: 40px 0;
+      color: #2F4F4F; /* Sobrescribe el color heredado de body */
+      font-family: 'Times New Roman', Times, serif; /* Sobrescribe la fuente base */
+    }
+
+    #quienes-somos h2 {
+      color: #8B0000; /* Excepción al color general de h2 */
+      font-family: Georgia, serif;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 4px solid #DAA520;
+    }
+
+    #quienes-somos p {
+      color: #2F4F4F;
+      font-size: 17px;
+      text-align: justify;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-left: 4px solid #DAA520;
+      border-radius: 6px;
+    }
+
+    /* 1. Selector de ID: Identifica secciones únicas */
+    #acceso, #registro {
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    }
+    #acceso {
+      background: linear-gradient(135deg, #E6E6FA 0%, #F0F8FF 100%);
+      border: 3px solid #9370DB;
+    }
+    #registro {
+      background: linear-gradient(135deg, #F0FFF0 0%, #F5FFFA 100%);
+      border: 3px solid #228B22;
+    }
+
+    /* 2. Selector de Etiqueta: Aplica estilos base a elementos comunes */
+    fieldset {
+      border: 2px solid #CCCCCC;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 20px 0;
+      background-color: #FFFFFF;
+    }
+    legend {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px 0;
+      font-weight: 600;
+      color: #5D4E37;
+    }
+
+    /* 3. Selector Descendiente: Contextualiza legend dentro de cada formulario */
+    #acceso fieldset legend { color: #4B0082; background-color: #E6E6FA; }
+    #registro fieldset legend { color: #006400; background-color: #F0FFF0; }
+
+    /* 4. Selector de Atributo: Diferencia estilos según tipo de campo */
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"],
+    form input[type="tel"],
+    form input[type="date"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #CCCCCC;
+      border-radius: 6px;
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    /* Especialización por formulario usando combinadores */
+    #acceso input[type="text"],
+    #acceso input[type="password"] { border-color: #9370DB; }
+    #acceso input:focus { border-color: #4B0082; box-shadow: 0 0 8px rgba(75, 0, 130, 0.3); }
+
+    #registro input[type="text"],
+    #registro input[type="email"],
+    #registro input[type="tel"],
+    #registro input[type="date"],
+    #registro select,
+    #registro textarea { border-color: #228B22; }
+    #registro input:focus,
+    #registro select:focus,
+    #registro textarea:focus { border-color: #006400; box-shadow: 0 0 8px rgba(34, 139, 34, 0.3); }
+
+    /* Radio buttons y checkboxes */
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin: 0 8px 0 0;
+      cursor: pointer;
+    }
+    input[type="radio"] + label, input[type="checkbox"] + label {
+      display: inline-block;
+      font-weight: normal;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    /* Botones de envío */
+    form input[type="submit"] {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #FFFFFF;
+    }
+    #acceso input[type="submit"] { background: linear-gradient(135deg, #8BAAAA, #5D4E37); }
+    #registro input[type="submit"] { background: linear-gradient(135deg, #228B22, #006400); }
+    form input[type="submit"]:hover { transform: translateY(-2px); box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
+
+    /* 1. Variables CSS para consistencia y evitar valores hardcodeados */
+    :root {
+      --color-primario: #8B4513;
+      --color-texto: #333333;
+      --fuente-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --espacio-std: 15px;
+    }
+
+    body { font-family: var(--fuente-base); color: var(--color-texto); }
+        
+    /* 2. Contextualización de selectores: evita alcance global no deseado */
+    main section p { margin-bottom: var(--espacio-std); text-align: justify; }
+        
+    /* 3. Uso de clases para reutilización sin depender de especificidad alta */
+    .texto-centrado { text-align: center; }
+    .btn-secundario { background: #f8f9fa; color: #333; border: 1px solid #ccc; }
+        
+    /* 4. !important SOLO para casos críticos (ej. validaciones) */
+    .campo-obligatorio-error {
+      border-color: #DC143C !important;
+      background-color: #FFF5F5;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>Restaurante Sabores de Chile</h1>
@@ -85,28 +215,24 @@
   <br>
 
   <main>
-    <!-- Sección Quiénes Somos -->
+    <!-- Sección Quiénes Somos (Excepción de herencia) -->
     <section id="quienes-somos">
-      <h2>Quiénes Somos</h2>                
-      <p>Somos un restaurante especializado en la <strong>gastronomía chilena tradicional</strong>, 
-      ubicado en el corazón de Santiago. Nuestro compromiso es rescatar y preservar las recetas 
-      ancestrales que han sido transmitidas de generación en generación.</p>
-          
-      <p>En <em>Sabores de Chile</em> utilizamos ingredientes frescos y de temporada,
-      trabajando directamente con productores locales para garantizar la máxima calidad
-      en cada plato que sirve.</p>
-
-      <p>Nuestro equipo está formado por chefs expertos en cocina tradicional chilena,
-      quienes se dedican con pasión a mantener vivas las costumbres culinarias de nuestro país,
-      ofreciendo una experiencia gastronómica auténtica tanto a clientes nacionales como internacionales.</p>         
+      <h2>Quiénes Somos</h2>
+      <p>Somos un restaurante especializado en la gastronomía chilena tradicional, ubicado en el corazón de Santiago. 
+        Nuestro compromiso es rescatar y preservar las recetas ancestrales que han sido transmitidas de generación en generación.</p>
+      <p>En Sabores de Chile utilizamos ingredientes frescos y de temporada, trabajando directamente con productores 
+        locales para garantizar la máxima calidad en cada plato que servimos.</p>
+      <p>Nuestro equipo está formado por chefs expertos en cocina tradicional chilena, quienes se dedican con pasión 
+        a mantener vivas las costumbres culinarias de nuestro país, ofreciendo una experiencia gastronómica auténtica 
+        tanto a clientes nacionales como internacionales.</p>
     </section>
-    <br><br>
+          
     <!-- Sección Platos Principales -->
     <section id="platos">
       <h2>Platos Principales</h2>
       <p>Disfruta de nuestros tradicionales platos chilenos preparados con el más alto estándar de calidad:</p>
 
-      <table border="1">
+      <table>
         <thead>
           <tr>
             <th>Plato</th>
@@ -116,35 +242,34 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Cazuela de Vacuno</strong></td>
+            <td>Cazuela de Vacuno</td>
             <td>Tradicional plato chileno con carne de vacuno, papas, zapallo y porotos verdes</td>
             <td>$11.400</td>
           </tr>
           <tr>
-            <td><strong>Charquicán</strong></td>
+            <td>Charquicán</td>
             <td>Guiso tradicional de carne picada con verduras de la estación</td>
             <td>$10.500</td>
           </tr>
           <tr>
-            <td><strong>Pastel de Choclo</strong></td>
+            <td>Pastel de Choclo</td>
             <td>Delicioso pastel de maíz relleno con pino de carne y albahaca fresca</td>
             <td>$12.900</td>
           </tr>
           <tr>
-            <td><strong>Empanadas de Pino (unidad)</strong></td>
+            <td>Empanadas de Pino (unidad)</td>
             <td>Clásica empanada chilena horneada con carne, cebolla, aceituna y huevo</td>
             <td>$3.500</td>
           </tr>
         </tbody>
       </table>
     </section>
-    <br><br>
+    
     <!-- Sección Bebidas -->
     <section id="bebidas">
       <h2>Bebidas</h2>
       <p>Acompaña tu comida con nuestras bebidas tradicionales y selección de vinos nacionales:</p>
-      
-      <table border="1">
+      <table>
         <thead>
           <tr>
             <th>Bebida</th>
@@ -154,35 +279,35 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Mote con Huesillo</strong></td>
+            <td>Mote con Huesillo</td>
             <td>Bebida tradicional chilena de trigo y duraznos deshidratados</td>
             <td>$3.500</td>
           </tr>
           <tr>
-            <td><strong>Vino Tinto (copa)</strong></td>
+            <td>Vino Tinto (copa)</td>
             <td>Selección de vinos nacionales: Cabernet Sauvignon, Carmenere, Malbec</td>
             <td>$4.200</td>
           </tr>
           <tr>
-            <td><strong>Vino Blanco (copa)</strong></td>
+            <td>Vino Blanco (copa)</td>
             <td>Sauvignon Blanc, Chardonnay de nuestros viñedos locales</td>
             <td>$4.200</td>
           </tr>
           <tr>
-            <td><strong>Terremoto</strong></td>
+            <td>Terremoto</td>
             <td>Cóctel tradicional: vino pipeño con helado de piña y granadina</td>
             <td>$5.500</td>
           </tr>
         </tbody>
       </table>
     </section>
-      <br><br>      
+         
     <!-- Sección Postres -->
     <section id="postres">
       <h2>Postres</h2>
       <p>Endulza tu experiencia con nuestros postres tradicionales:</p>
 
-      <table border="1">
+      <table>
         <thead>
           <tr>
             <th>Postre</th>
@@ -192,48 +317,47 @@
         </thead>
         <tbody>
           <tr>
-            <td><strong>Mote con Huesillo (postre)</strong></td>
+            <td>Mote con Huesillo (postre)</td>
             <td>Versión dulce de esta tradicional preparación</td>
             <td>$3.500</td>
           </tr>
           <tr>
-            <td><strong>Sopaipillas con Miel</strong></td>
+            <td>Sopaipillas con Miel</td>
             <td>Masa frita de zapallo acompañada de miel de ulmo o chancaca</td>
             <td>$2.900</td>
           </tr>
           <tr>
-            <td><strong>Leche Asada</strong></td>
+            <td>Leche Asada</td>
             <td>Postre tradicional de leche caramelizada al horno</td>
             <td>$3.800</td>
           </tr>
         </tbody>
       </table>
     </section>
-    <br><br>        
+           
     <!-- Sección Especialidades -->
     <section id="especialidades">
       <h2>Especialidades de la Casa</h2>
-      <p>Platos exclusivos que nos distinguen y representan la riqueza de nuestra cultura gastronómica:</p>        
-      
+      <p>Platos exclusivos que nos distinguen y representan la riqueza de nuestra cultura gastronómica:</p>             
       <dl>
-        <dt><strong>Cordero al Merkén</strong></dt>
+        <dt>Cordero al Merkén</dt>
         <dd>Cordero preparado con merkén, especia tradicional mapuche obtenida del ají ahumado y molido. 
         Este plato representa la fusión entre la cocina chilota y la tradición del sur de Chile, 
         acompañado de verduras asadas y papas nativas.</dd>
         <br>
-        <dt><strong>Ceviche de Reineta</strong></dt>
+        <dt>Ceviche de Reineta</dt>
         <dd>Pescado fresco del sur de Chile marinado en limón y cilantro, preparado al estilo 
         chileno con cebolla morada, ají verde y un toque de cilantro fresco. Servido con 
         acompañamiento de marraquetas tostadas.</dd>
         <br>
-        <dt><strong>Curanto en Olla</strong></dt>
+        <dt>Curanto en Olla</dt>
         <dd>Versión moderna del tradicional curanto chilote que originalmente se cocina bajo 
         tierra. Incluye mariscos (almejas, choritos, jaibas), carnes (vacuno, cerdo, pollo), 
         papas, chapaleles y milcaos, todo cocido a fuego lento para preservar los sabores 
         auténticos del archipiélago de Chiloé.</dd>
       </dl>
     </section>
-    <br><br>
+  
     <!-- Sección Promociones -->
     <section id="promociones">
       <h2>Promociones Especiales</h2>
@@ -247,7 +371,7 @@
         <li><strong>Descuento Estudiantes</strong> - 15% de descuento presentando credencial vigente</li>
       </ul>
     </section>
-    <br><br>
+  
     <!-- Sección Plato de la Semana -->
     <section id="plato-semana">
       <h2>Plato de la Semana</h2>
@@ -256,7 +380,7 @@
         <h3>Pastel de Choclo</h3>
 
         <p><strong>Descripción:</strong></p>
-        <p>El <strong><em>Pastel de Choclo</em></strong> es uno de los platos más emblemáticos de la gastronomía chilena.
+        <p>El Pastel de Choclo es uno de los platos más emblemáticos de la gastronomía chilena.
         Esta deliciosa preparación consiste en una base de pino (<em>carne picada con cebolla, comino y 
         ají de color</em>) cubierta con una cremosa capa de choclo (<em>maíz</em>) molido, que se hornea hasta
         dorar. Tradicionalmente se sirve en greda, lo que le aporta un sabor característico único.</p>
@@ -264,9 +388,8 @@
         <p>Este plato representa la fusión entre la tradición indígena del maíz y las influencias
         españolas, siendo un símbolo de nuestra identidad culinaria que se disfruta especialmente
         durante la temporada de verano cuando el choclo está en su punto óptimo.</p>
-        <br>
+      
         <h4>Galería de Imágenes</h4>
-
         <figure>
           <img src="/assets/imagenes/pastel-choclo.jpg" 
               alt="Pastel de Choclo" 
@@ -342,144 +465,85 @@
         <p><small><em>Video: "Comida típica de Chile" - Duración: 5:10 minutos</em></small></p>
       </article>
     </section>
-    <br><br>
+
+    <!-- FORMULARIO ACCESO -->
     <section id="acceso">
       <h2>Acceso</h2>
-      <p>Ingresa tus credenciales para acceder a beneficios exclusivos:</p>
-
-      <form name= "formulario_acceso" method="post" action="/login/">
+      <form action="#" method="post">
         <fieldset>
           <legend>Datos de Acceso</legend>
           <label for="usuario">Nombre de Usuario:</label>
-          <input
-           type="text" 
-           id="usuario" 
-           name="usuario" 
-           placeholder="Ingresa nombre de usuario"
-           required
-           autocomplete="username">
-          <br>
+          <input type="text" id="usuario" name="usuario" required>
+                    
           <label for="password">Contraseña:</label>
-          <input
-           type="password" 
-           id="password" 
-           name="password" 
-           placeholder="Ingresa contraseña"
-           required
-           autocomplete="current-password">
-          <br>
-          <input
-           type="submit" 
-           value="Ingresar"
-           style="background-color: #8BAAAA">
-           <br>
+          <input type="password" id="password" name="password" required>
+                    
+          <input type="submit" value="Ingresar">
         </fieldset>
-        <p><em><a href="#registro">¿No tienes cuenta? Regístrate aquí</a></em></p>
       </form>
+      <a href="#registro" class="texto-centrado">¿No tienes cuenta? Regístrate aquí</a>
     </section>
-    <br><br>
+
+    <!-- FORMULARIO REGISTRO -->
     <section id="registro">
       <h2>Registro de Nuevos Usuarios</h2>
-      <p>Completa el siguiente formulario para unirte a nuestro club de beneficios:</p>
-
-      <form name="formulario_registro" method="post" action="/registro/">
+      <form action="#" method="post">
         <fieldset>
           <legend>Datos Personales</legend>
-
           <label for="nombre">Nombre Completo:</label>
-          <input
-           type="text" 
-           id="nombre" 
-           name="nombre" 
-           placeholder="Ingresa tu nombre completo"
-           required
-           autocomplete="name">
-          <br>
-          <label for="tipo_doc">Tipo de Documento:</label>
-          <select id="tipo_doc" name="tipo_doc" required>
+          <input type="text" id="nombre" name="nombre" required>
+                    
+          <label for="tipo-doc">Tipo de Documento:</label>
+          <select id="tipo-doc" name="tipo-doc">
             <option value="">Selecciona uno...</option>
             <option value="dni">DNI</option>
             <option value="rut">RUT</option>
             <option value="cedula">Cédula</option>
             <option value="pasaporte">Pasaporte</option>
           </select>
-          <br>
-          <label for="num_doc">Número de Documento:</label>
-          <input
-           type="text" 
-           id="num_doc" 
-           name="num_doc" 
-           placeholder="Ingresa tu número de documento"
-           required
-           pattern="[A-Za-z0-9]{5,20}"
-           title="El número de documento debe contener entre 5 y 20 caracteres alfanuméricos"
-           autocomplete="off">
-          <br>
-          <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
-          <input
-           type="date" 
-           id="fecha_nacimiento" 
-           name="fecha_nacimiento" 
-           required>
-          <br>
-          <label for="genero">Género:</label>
-          <input type="radio" name="genero" id="masculino" value="masculino">
+                    
+          <label for="num-doc">Número de Documento:</label>
+          <input type="text" id="num-doc" name="num-doc" required>
+                    
+          <label for="fecha-nac">Fecha de Nacimiento:</label>
+          <input type="date" id="fecha-nac" name="fecha-nac" required>
+                    
+          <label>Género:</label>
+          <input type="radio" id="masculino" name="genero" value="masculino">
           <label for="masculino">Masculino</label>
-          <input type="radio" name="genero" id="femenino" value="femenino">
+          <input type="radio" id="femenino" name="genero" value="femenino">
           <label for="femenino">Femenino</label>
-          <br>
-          </fieldset>
-          <fieldset>
+        </fieldset>
+                
+        <fieldset>
           <legend>Datos de Contacto</legend>
           <label for="email">Correo Electrónico:</label>
-          <input
-           type="email" 
-           id="email" 
-           name="email" 
-           placeholder="Ingresa tu correo electrónico"
-           required
-           autocomplete="email">
-          <br>
+          <input type="email" id="email" name="email" required>
+                    
           <label for="telefono">Teléfono Móvil:</label>
-          <input
-           type="tel" 
-           id="telefono" 
-           name="telefono" 
-           placeholder="+56 9 1234 5678"
-           pattern="[+]{0,1}[0-9]{1,3}[ ]{0,1}[0-9]{4}[ ]{0,1}[0-9]{4}"
-           required
-           autocomplete="tel">
+          <input type="tel" id="telefono" name="telefono">
         </fieldset>
-        <br>
+                
         <fieldset>
           <legend>Información Adicional</legend>
           <label for="comentarios">Comentarios:</label>
-          <textarea
-           id="comentarios" 
-           name="comentarios" 
-           cols="60"
-           rows="5"
-           placeholder="Escribe tus comentarios, preferencias alimentarias o alergias... ">
-          </textarea>
-        <br>
-        <input
-         type="submit" 
-         value="Registrarse" 
-         style="background-color: #8BAAAA">
+          <textarea id="comentarios" name="comentarios" rows="4"></textarea>
         </fieldset>
+                
+        <input type="submit" value="Registrarse">
       </form>
     </section>
-    
   </main>
-  <br><br>
+  
   <footer>
     <p>&copy; 2026 Sabores de Chile SpA - Todos los derechos reservados</p>
-    <p><small>Horario de atención: Lunes a Domingo de 12:00 a 23:00 hrs</small></p>
+    <p>Horario de atención: Lunes a Domingo de 12:00 a 23:00 hrs</p>
     <address>
-      <strong>Ubicación:</strong> Av. Providencia 1234<br>
-      <strong>Teléfono:</strong> +56 9 1234 5678<br>
-      <strong>Email:</strong> contacto@saboresdechile.cl
+      Ubicación: Av. Providencia 1234<br>
+      Teléfono: +56 9 1234 5678<br>
+      Email: contacto@saboresdechile.cl
     </address>
   </footer>
+
 </body>
 </html>
