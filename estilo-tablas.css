@@ -1,94 +1,78 @@
-/* Hoja de estilo para las tablas de Platos, Bebidas y Postres
-   Método: <link>
-*/
+/* ========================================
+   TABLAS - PLATOS, BEBIDAS Y POSTRES
+   ======================================== */
 
-/* Estilos generales para todas las tablas */
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+  border-collapse: collapse; /* Fusiona bordes adyacentes */
+  border-spacing: 0; /* Elimina espacio entre celdas */
+  margin: 25px 0;
   background-color: #FFFFFF;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
+  font-size: 15px;
 }
 
-/* Estilos para las cabeceras de tabla */
 thead {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #FFFFFF;
 }
 
-thead tr {
-  border-bottom: 3px solid #4a4a6a;
-}
+thead tr { border-bottom: 3px solid #4a4a6a; }
 
 th {
-  padding: 15px 12px;
+  padding: 18px 15px;
   text-align: left;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
 }
 
-/* Estilos para las celdas del cuerpo de tabla */
 tbody tr {
   border-bottom: 1px solid #DDDDDD;
   transition: background-color 0.3s ease;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #F8F9FA;
-}
-
-tbody tr:nth-child(odd) {
-  background-color: #FFFFFF;
-}
-
-tbody tr:hover {
-  background-color: #E3F2FD;
-}
+tbody tr:nth-child(even) { background-color: #F8F9FA; }
+tbody tr:nth-child(odd) { background-color: #FFFFFF; }
+tbody tr:hover { background-color: #E3F2FD; }
 
 td {
-  padding: 12px;
-  font-size: 14px;
-  color: #333333;
-}
-
-td strong {
-  color: #2C3E50;
+  padding: 15px;
   font-size: 15px;
+  color: #333333;
+  line-height: 1.5;
+  border: none;
 }
 
-/* Estilos específicos para la columna de precio */
+td strong { color: #2C3E50; font-size: 16px; font-weight: bold; }
+
+/* Columna de precio */
 td:last-child {
   font-weight: bold;
   color: #27AE60;
-  font-size: 16px;
+  font-size: 17px;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 25px;
 }
 
-/* Secciones que contienen tablas */
+/* Secciones contenedoras */
 #platos, #bebidas, #postres {
-  margin: 30px 0;
-  padding: 20px;
+  margin: 35px 0;
+  padding: 30px;
   background-color: #FAFAFA;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 2px solid #E0E0E0;
 }
 
 #platos h2, #bebidas h2, #postres h2 {
   color: #5D4E6D;
   font-family: Georgia, serif;
-  font-size: 26px;
-  border-bottom: 2px solid #9B8AA5;
-  padding-bottom: 10px;
-  margin-bottom: 15px;
-}
-
-#platos p, #bebidas p, #postres p {
-  color: #666666;
-  font-style: italic;
-  margin-bottom: 15px;
+  font-size: 28px;
+  border-bottom: 3px solid #9B8AA5;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }

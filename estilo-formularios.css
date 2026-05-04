@@ -1,0 +1,131 @@
+/* ========================================
+   FORMULARIOS - ACCESO Y REGISTRO
+   ======================================== */
+
+/* Selector de ID: Alta especificidad para secciones únicas */
+#acceso, #registro {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+#acceso {
+  background: linear-gradient(135deg, #E6E6FA 0%, #F0F8FF 100%);
+  border: 3px solid #9370DB;
+}
+
+#registro {
+  background: linear-gradient(135deg, #F0FFF0 0%, #F5FFFA 100%);
+  border: 3px solid #228B22;
+}
+
+/* Selector de etiqueta: Estilos base heredables */
+fieldset {
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 25px 0;
+  background-color: #FFFFFF;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 12px;
+  border-radius: 6px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px 0;
+  font-weight: 600;
+  color: #5D4E37;
+  font-size: 14px;
+}
+
+/* Selector descendiente + ID: Contextualización para evitar colisiones */
+#acceso fieldset legend { color: #4B0082; background-color: #E6E6FA; }
+#registro fieldset legend { color: #006400; background-color: #F0FFF0; }
+
+/* Selector de atributo: Diferenciación por tipo de campo */
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #CCCCCC;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit; /* Hereda fuente del body */
+  transition: all 0.3s ease;
+}
+
+/* Diferenciación visual por formulario */
+#acceso input[type="text"],
+#acceso input[type="password"] { border-color: #9370DB; }
+#acceso input:focus { border-color: #4B0082; box-shadow: 0 0 8px rgba(75, 0, 130, 0.3); }
+
+#registro input[type="text"],
+#registro input[type="email"],
+#registro input[type="tel"],
+#registro input[type="date"],
+#registro select,
+#registro textarea { border-color: #228B22; }
+#registro input:focus,
+#registro select:focus,
+#registro textarea:focus { border-color: #006400; box-shadow: 0 0 8px rgba(34, 139, 34, 0.3); }
+
+/* Radio/Checkbox */
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+}
+input[type="radio"] + label, input[type="checkbox"] + label {
+  display: inline-block;
+  font-weight: normal;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+textarea { resize: vertical; min-height: 100px; }
+
+/* Botones de envío */
+form input[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #FFFFFF;
+}
+
+#acceso input[type="submit"] { background: linear-gradient(135deg, #8BAAAA, #5D4E37); }
+#registro input[type="submit"] { background: linear-gradient(135deg, #228B22, #006400); }
+
+form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Clase reutilizable */
+.enlace-registro {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #4169E1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.enlace-registro:hover { color: #1E90FF; text-decoration: underline; }

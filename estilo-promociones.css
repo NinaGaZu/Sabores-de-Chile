@@ -1,55 +1,58 @@
-/* Hoja de estilo para la sección de Promociones Especiales
-   Método: @import
-*/
+/* ========================================
+   PROMOCIONES ESPECIALES
+   ======================================== */
 
-/* Estilos para la lista no ordenada de promociones */
 #promociones {
   background-color: #F0F8FF;
-  padding: 25px;
-  margin: 20px 0;
+  padding: 30px;
+  margin: 40px 0;
   border: 3px dashed #4169E1;
   border-radius: 15px;
 }
 
 #promociones h2 {
   color: #191970;
-  font-family: "Times New Roman", serif;
+  font-family: Georgia, serif;
   font-size: 28px;
   text-align: center;
   text-decoration: underline;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #promociones ul {
-  list-style-type: square;
-  list-style-position: inside;
+  list-style-type: square; /* Viñetas cuadradas */
+  list-style-position: inside; /* Dentro del flujo del texto */
   padding-left: 10px;
+  margin: 0;
 }
 
 #promociones li {
   background-color: #FFFFFF;
-  margin: 12px 0;
-  padding: 15px;
-  border-left: 4px solid #FF6347;
+  margin: 15px 0;
+  padding: 18px 20px;
+  border-left: 5px solid #FF6347;
   border-radius: 8px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
   font-size: 15px;
   line-height: 1.6;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #promociones li:hover {
   transform: translateX(10px);
   background-color: #FFE4E1;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 #promociones li strong {
   color: #DC143C;
   font-size: 16px;
+  font-weight: bold;
 }
 
-#promociones p {
+#promociones > p {
   color: #2F4F4F;
   font-style: italic;
   text-align: center;
+  margin-bottom: 20px;
 }
