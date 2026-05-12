@@ -1,0 +1,344 @@
+/* ========================================
+   ESTILOS BASE - MOBILE FIRST (Móviles)
+   ======================================== */
+
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px; /* Tamaño base para móviles */
+  line-height: 1.6;
+  color: #333333;
+  background-color: #FAFAFA;
+  padding: 10px; /* Padding mínimo para móviles */
+}
+
+/* Header - Versión móvil */
+header {
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
+  color: #FFFFFF;
+  padding: 20px 15px; /* Padding reducido para móviles */
+  text-align: center;
+  border-bottom: 3px solid #D2691E;
+}
+
+header h1 {
+  font-size: 24px; /* Tamaño reducido para móviles */
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Navegación móvil - Menú vertical */
+nav {
+  background-color: #5D4E37;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+nav h2 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #FFD700;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column; /* Vertical en móviles */
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  padding: 12px 15px;
+  background-color: #8BAAAA;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Secciones - Versión móvil */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 10px;
+}
+
+section {
+  margin: 25px 0;
+  padding: 20px 15px; /* Padding reducido */
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #E0E0E0;
+}
+
+section h2 {
+  font-size: 22px; /* Tamaño reducido */
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #D2691E;
+}
+
+section p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+/* Tablas - Versión móvil */
+table {
+  width: 100%;
+  font-size: 12px; /* Tamaño reducido */
+}
+
+th, td {
+  padding: 8px 5px;
+}
+
+/* Footer - Versión móvil */
+footer {
+  background: linear-gradient(135deg, #5D4E37 0%, #8B4513 100%);
+  color: #FFFFFF;
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: 40px;
+  border-top: 3px solid #D2691E;
+}
+
+footer p {
+  font-size: 12px;
+  margin: 8px 0;
+}
+
+/* ========================================
+   MEDIA QUERY - TABLETS (768px)
+   ======================================== */
+
+@media screen and (min-width: 768px) {
+  
+  body {
+    font-size: 15px;
+    padding: 15px;
+  }
+  
+  header {
+    padding: 30px 20px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+  }
+  
+  /* Navegación horizontal en tablets */
+  nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  nav a {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  main {
+    max-width: 750px;
+    padding: 25px 20px;
+  }
+  
+  section {
+    padding: 25px 20px;
+    margin: 30px 0;
+  }
+  
+  section h2 {
+    font-size: 26px;
+  }
+  
+  section p {
+    font-size: 14px;
+  }
+  
+  /* Tablas - Tamaño medio */
+  table {
+    font-size: 13px;
+  }
+  
+  th, td {
+    padding: 10px 8px;
+  }
+  
+  footer {
+    padding: 30px 20px;
+  }
+  
+  footer p {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
+   MEDIA QUERY - ESCRITORIO (1024px)
+   ======================================== */
+
+@media screen and (min-width: 1024px) {
+  
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+  
+  header {
+    padding: 40px 30px;
+    border-bottom: 5px solid #D2691E;
+  }
+  
+  header h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Navegación optimizada para escritorio */
+  nav {
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  nav h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  
+  nav ul {
+    gap: 12px;
+  }
+  
+  nav a {
+    padding: 10px 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  nav a:hover {
+    background-color: #FFD700;
+    color: #5D4E37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #FFFFFF;
+  }
+  
+  main {
+    max-width: 1200px;
+    padding: 30px 25px;
+  }
+  
+  section {
+    padding: 35px 30px;
+    margin: 40px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #D2691E;
+  }
+  
+  section p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+  
+  /* Tablas - Tamaño completo */
+  table {
+    font-size: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  th {
+    padding: 18px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  td {
+    padding: 15px;
+    font-size: 15px;
+  }
+  
+  footer {
+    padding: 40px 30px;
+    margin-top: 60px;
+    border-top: 5px solid #D2691E;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  footer p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  footer address {
+    margin-top: 25px;
+    padding: 20px;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+}
+
+/* ========================================
+   MEDIA QUERY - PANTALLAS GRANDES (1200px+)
+   ======================================== */
+
+@media screen and (min-width: 1200px) {
+  
+  main {
+    max-width: 1400px;
+  }
+  
+  section {
+    padding: 40px 35px;
+  }
+  
+  section h2 {
+    font-size: 36px;
+  }
+}
+
+/* ========================================
+   MEDIA QUERY - ORIENTACIÓN
+   ======================================== */
+
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  
+  header h1 {
+    font-size: 28px;
+  }
+  
+  section {
+    padding: 15px 12px;
+    margin: 15px 0;
+  }
+  
+  section h2 {
+    font-size: 20px;
+  }
+}
