@@ -1,0 +1,684 @@
+/* ========================================
+   ESTILOS UNIFICADOS - Sabores de Chile
+   Consolidación Mobile First + Flexbox robusto
+   Referencia: IACC (2024) - Programación Web I
+   ======================================== */
+
+:root {
+    --color-primario: #8B4513;
+    --color-secundario: #DAA520;
+    --color-acento: #2C5F2D;
+    --color-nav-bg: #5D4E37;
+    --color-destacado: #FFD700;
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #5D4E37;
+    --color-fondo: #FAFAFA;
+    --color-fondo-claro: #FFF8DC;
+    --color-borde: #E0E0E0;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-titulos: Georgia, 'Times New Roman', serif;
+    --espacio-pequeno: 10px;
+    --espacio-medio: 20px;
+    --espacio-grande: 30px;
+    --radio-borde: 12px;
+    --radio-borde-pequeno: 8px;
+    --sombra-suave: 0 3px 10px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: var(--fuente-principal);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color-texto-principal);
+    background-color: var(--color-fondo);
+    background-image: linear-gradient(to bottom, #FDF8F3 0%, #FAFAFA 100%);
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    margin-bottom: var(--espacio-medio);
+    line-height: 1.2;
+}
+h1 { font-size: 28px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+
+p { 
+    margin-bottom: var(--espacio-medio); 
+    text-align: justify; 
+}
+
+a { 
+    color: var(--color-primario); 
+    text-decoration: none; 
+    transition: all 0.3s ease; 
+}
+
+a:hover { color: var(--color-secundario); }
+
+img { 
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL
+   ======================================== */
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.seccion-flex {
+    margin: 40px 0;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+}
+
+.plato-articulo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#quienes-somos h2, #plato-semana h2, #formulario h2 {
+    border-bottom: 3px solid var(--color-secundario);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* ========================================
+   FIX: GRID CONTENEDOR (platos/bebidas/postres)
+   ======================================== */
+.grid-contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 20px;
+}
+
+.grid-item {
+    margin: 20px 0;
+}
+
+.tabla-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ========================================
+   NAVEGACIÓN FLEXIBLE - OPTIMIZADA
+   Basado en: IACC (2024) - Propiedades del contenedor flexible
+   ======================================== */
+
+.nav-flexible {
+    /* Contenedor flexible */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #5D4E37 0%, #8B4513 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    
+}
+
+.nav-titulo {
+    font-size: 16px;
+    color: #FFD700;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.nav-lista-flex {
+    /* Lista como contenedor flexible */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-item {
+    /* Elementos flexibles individuales */
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: 200px;
+    min-width: 0;
+}
+
+.nav-enlace {
+    display: block;
+    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-align: center;
+    
+    /* Accesibilidad */
+    outline: none;
+}
+
+.nav-enlace:hover,
+.nav-enlace:focus {
+    background-color: #FFD700;
+    color: #5D4E37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: #FFFFFF;
+}
+
+.nav-enlace:focus-visible {
+    outline: 3px solid #FFD700;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header-principal {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid #D2691E;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.header-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.titulo-restaurante {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #FFFFFF;
+    font-size: 32px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 16px;
+    font-style: italic;
+    color: #FFD700;
+    margin: 0;
+}
+
+/* ========================================
+   GALERÍA FLEXIBLE - PLATO DE LA SEMANA
+   Basado en: IACC (2024) - Alineación y ordenamiento de elementos
+   ======================================== */
+
+.galeria-flex {
+    /* Contenedor flexible para la galería */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+    padding: 20px;
+    background-color: var(--color-fondo-claro);
+    border-radius: var(--radio-borde);
+}
+
+.galeria-item {
+    /* Elementos flexibles de la galería */
+    flex: 1 1 100%;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: var(--radio-borde-pequeno);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+    min-width: 0;
+    
+    /* Transición suave */
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra-media);
+}
+
+.galeria-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 3px solid var(--color-secundario);
+    transition: transform 0.3s ease;
+}
+
+.galeria-imagen:hover {
+    transform: scale(1.03);
+}
+
+.galeria-caption {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--color-texto-secundario);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* ========================================
+   AUDIO
+   ======================================== */
+.audio-contenedor {
+    margin: 30px 0;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--radio-borde-pequeno);
+}
+
+.audio-element {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
+}
+
+.audio-info { font-size: 13px; text-align: center; color: var(--color-texto-secundario); }
+
+/* ========================================
+   ENLACES EXTERNOS
+   ======================================== */
+.enlace-externo {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #4169E1, #1E90FF);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.enlace-externo:hover {
+    background: linear-gradient(135deg, #1E90FF, #4169E1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.enlace-info { text-align: center; font-size: 12px; color: var(--color-texto-secundario); }
+
+/* ========================================
+   FORMULARIOS
+   ======================================== */
+.form-contenedor-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.form-bloque {
+    flex: 1 1 100%;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+    min-width: 0;
+}
+
+.form-fieldset {
+    border: 2px solid #CCCCCC;
+    border-radius: var(--radio-borde);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.form-legend {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--color-primario);
+    padding: 0 10px;
+}
+
+.form-grupo { margin-bottom: 15px; }
+
+.genero-container { display: flex; gap: 20px; align-items: center; }
+
+.form-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--color-texto-secundario);
+    font-size: 14px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #CCCCCC;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 8px rgba(139, 69, 19, 0.3);
+    outline: none;
+}
+
+.form-boton {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-nav-bg));
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-boton:hover {
+    background: linear-gradient(135deg, var(--color-nav-bg), var(--color-primario));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.enlace-registro {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4169E1;
+    font-weight: bold;
+}
+
+.enlace-registro:hover { color: #1E90FF; text-decoration: underline; }
+
+/* ========================================
+   FOOTER
+   FIX: estructura corregida; footer-info ahora contiene el address correctamente
+   ======================================== */
+.footer-principal {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #5D4E37 0%, #8B4513 100%);
+    color: #FFFFFF;
+    padding: 30px 20px;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+    border-top: 5px solid #D2691E;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-copy { font-style: normal; line-height: 1.8; }
+
+.footer-info { line-height: 1.8; }
+
+.footer-principal a { color: #FFD700; }
+
+.footer-principal address { font-style: normal; }
+
+/* ========================================
+   TABLAS
+   ======================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 15px;
+    /* FIX: el scroll ahora lo maneja .tabla-scroll, no display:block en la table */
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #FFFFFF;
+}
+
+thead tr { border-bottom: 3px solid #4a4a6a; }
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) { background-color: #F8F9FA; }
+tbody tr:nth-child(odd) { background-color: #FFFFFF; }
+tbody tr:hover { background-color: #E3F2FD; }
+
+td {
+    padding: 15px;
+    font-size: 15px;
+    color: #333333;
+    line-height: 1.5;
+}
+
+td strong { color: #2C3E50; font-size: 16px; font-weight: bold; }
+
+td:last-child {
+    font-weight: bold;
+    color: #27AE60;
+    font-size: 17px;
+    text-align: right;
+    padding-right: 25px;
+}
+
+/* ========================================
+   PROMOCIONES
+   FIX: borde cambiado a color de la paleta (antes #4169E1 azul rompía con lo terroso)
+   ======================================== */
+#promociones {
+    background-color: var(--color-fondo-claro);
+    padding: 30px;
+    margin: 40px 0;
+    border: 3px dashed var(--color-secundario);
+    border-radius: 15px;
+}
+
+#promociones h2 {
+    color: var(--color-primario);
+    font-family: Georgia, serif;
+    font-size: 28px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+#promociones ul { list-style-type: none; padding-left: 10px; margin: 0; }
+
+#promociones li {
+    background-color: #FFFFFF;
+    margin: 15px 0;
+    padding: 18px 20px;
+    border-left: 5px solid var(--color-primario);
+    border-radius: var(--radio-borde-pequeno);
+    box-shadow: var(--sombra-suave);
+    font-size: 15px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+#promociones li:hover {
+    transform: translateX(10px);
+    background-color: #FFF3E0;
+    box-shadow: var(--sombra-media);
+}
+
+#promociones li strong { color: var(--color-primario); font-size: 16px; }
+
+#promociones > p {
+    color: var(--color-texto-secundario);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ========================================
+   ESPECIALIDADES
+   FIX: dt ahora tiene margin-top para separación en vez de <br> en el HTML
+   ======================================== */
+#especialidades dl { margin: 20px 0; }
+
+#especialidades dt {
+    font-weight: bold;
+    color: var(--color-primario);
+    font-size: 20px;
+    margin-top: 25px; /* FIX: reemplaza los <br> que había en el HTML */
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: var(--color-fondo-claro);
+    border-left: 4px solid #D2691E;
+    border-radius: var(--radio-borde-pequeno);
+}
+
+/* Primer dt no necesita margin-top extra */
+#especialidades dt:first-child { margin-top: 0; }
+
+#especialidades dd {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #F5F5DC;
+    border-radius: var(--radio-borde-pequeno);
+    line-height: 1.8;
+    border: 1px solid #DDDDDD;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+.fila-flex { display: flex; flex-wrap: wrap; gap: 20px; margin: 30px 0; }
+.flex-item { flex: 1 1 300px; min-width: 0; }
+
+/* ========================================
+   SECCIONES ESPECÍFICAS
+   ======================================== */
+#plato-semana {
+    background: linear-gradient(to bottom, #FFF8DC, #FFFFFF);
+    border: 3px solid var(--color-secundario);
+    border-radius: var(--radio-borde);
+    padding: 40px 35px;
+    margin: 50px auto;
+    max-width: 1000px;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#plato-semana h3 {
+    color: #8B4513;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#videos-relacionados article {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-suave);
+    text-align: center;
+}
+
+#videos-relacionados article h3 { margin-bottom: 15px; color: var(--color-primario); }
+
+/* FIX: iframes sin width/height fijos en HTML → el responsive lo maneja aspect-ratio aquí */
+#videos-relacionados iframe {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radio-borde);
+    border: 3px solid #4169E1;
+    box-shadow: var(--sombra-media);
+    transition: transform 0.3s ease;
+}
+
+#videos-relacionados iframe:hover { transform: scale(1.02); }
+
+#platos, #bebidas, #postres {
+    margin: 35px 0;
+    padding: 30px;
+    background-color: #FAFAFA;
+    border-radius: 12px;
+    border: 2px solid #E0E0E0;
+}
+
+#platos h2, #bebidas h2, #postres h2 {
+    color: #5D4E6D;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    border-bottom: 3px solid #9B8AA5;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+#especialidades { background-color: #FFF8DC; }
+
+#videos-relacionados {
+    background-color: #F0F8FF;
+    border: 3px solid #4169E1;
+    border-radius: 15px;
+    padding: 40px 35px;
+    margin: 50px 0;
+    position: relative;
+}
+
+#formulario {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px 35px;
+    border-radius: var(--radio-borde);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
