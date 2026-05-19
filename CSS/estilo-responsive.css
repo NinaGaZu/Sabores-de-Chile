@@ -1,0 +1,273 @@
+/* ========================================
+   ESTILOS RESPONSIVOS - MOBILE FIRST
+   Ajustes progresivos por breakpoint
+   Referencia: IACC (2024) - Programación Web I
+   ======================================== */
+
+/* ========================================
+   TABLET (768px y superior)
+   ======================================== */
+@media screen and (min-width: 768px) {
+    body { 
+        font-size: 15px; 
+    }
+
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 22px; }
+
+    .titulo-restaurante { font-size: 42px; }
+
+    .tagline { font-size: 18px; }
+
+    .nav-lista-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        width: auto;
+        max-width: none;
+    }
+    
+    .nav-enlace {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .galeria-flex {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .galeria-item {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    /* Formularios: lado a lado en tablet */
+    .form-contenedor-flex { 
+        flex-direction: row; 
+        flex-wrap: wrap;
+    }
+
+    .form-bloque { flex: 1 1 0; }
+
+    /* Contenedor principal con más espacio */
+    .contenedor-principal {
+        padding: 25px 20px;
+    }
+    
+    .seccion-flex {
+        padding: 35px 30px;
+        margin: 50px 0;
+    }
+    
+    /* Grid de platos: 2 columnas en tablet */
+    .grid-contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ========================================
+   ESCRITORIO (1024px y superior)
+   ======================================== */
+@media screen and (min-width: 1024px) {
+    body { font-size: 16px; }
+
+    h1 { font-size: 42px; }
+    h2 { font-size: 32px; }
+    h3 { font-size: 24px; }
+
+    .header-principal {
+        padding: 40px 30px; 
+    }
+
+    .titulo-restaurante { 
+        font-size: 48px; 
+    }
+
+    .nav-flexible {
+        padding: 15px 25px;
+        max-width: 100%;
+    }
+    
+    .nav-lista-flex {
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .nav-enlace {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* FIX: grid-contenedor en 3 columnas (platos / bebidas / postres) en desktop */
+    .grid-contenedor {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        align-items: start;
+        padding: 0 20px;
+    }
+
+    /* Grid de platos: 3 columnas en desktop */
+    .grid-contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        align-items: start;
+        padding: 0 20px;
+    }
+    
+    .contenedor-principal {
+        padding: 30px 25px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .seccion-flex {
+        padding: 40px 35px;
+        margin: 60px 0;
+    }
+
+    .galeria-flex {
+        gap: 25px;
+    }
+    
+    .galeria-item {
+        flex: 0 0 calc(50% - 25px);
+        max-width: calc(50% - 25px);
+    }
+
+    .audio-element { max-width: 600px; }
+}
+
+/* ========================================
+   PANTALLAS GRANDES (1200px y superior)
+   ======================================== */
+@media screen and (min-width: 1200px) {
+    .contenedor-principal {
+        max-width: 1400px;
+    }
+    
+    .seccion-flex {
+        padding: 50px 40px;
+    }
+    
+    .grid-contenedor {
+        padding: 0 25px;
+    }
+}
+
+/* ========================================
+   LANDSCAPE MÓVIL
+   ======================================== */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .header-principal {
+        padding: 15px 20px;
+    }
+    
+    .titulo-restaurante {
+        font-size: 24px;
+    }
+    
+    .seccion-flex {
+        padding: 20px 15px;
+        margin: 25px 0;
+    }
+    
+    /* Ajuste de tablas en landscape */
+    .tabla-scroll {
+        max-height: 60vh;
+    }
+
+    .galeria-flex {
+        flex-direction: row;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .galeria-item {
+        flex: 1 1 45%;
+        max-width: 50%;
+        padding: 10px;
+    }
+    
+    .galeria-caption {
+        font-size: 12px;
+    }
+
+    .nav-lista-flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .nav-enlace {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+}
+
+/* ========================================
+   PANTALLAS PEQUEÑAS (480px y menor)
+   ======================================== */
+@media screen and (max-width: 480px) {
+    h1 { font-size: 24px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 18px; }
+    
+    .titulo-restaurante {
+        font-size: 26px;
+    }
+    
+    .tagline {
+        font-size: 14px;
+    }
+    
+    .seccion-flex {
+        padding: 20px 15px;
+        margin: 30px 0;
+    }
+    
+    /* Tablas más compactas */
+    table {
+        font-size: 13px;
+    }
+    
+    td, th {
+        padding: 10px;
+    }
+    
+    /* Formularios optimizados */
+    .form-input {
+        padding: 8px;
+        font-size: 14px; /* Previene zoom en iOS */
+    }
+    
+    .nav-flexible {
+        padding: 12px 10px;
+    }
+    
+    .nav-enlace {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+
+    .galeria-flex {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .galeria-item {
+        padding: 10px;
+    }
+    
+    .galeria-caption {
+        font-size: 12px;
+    }
+
+}
